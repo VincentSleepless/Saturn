@@ -59,8 +59,9 @@ JavaJobReturn是作业结果返回的封装。里面三个成员变量，包括�
 - returnMsg：返回信息。将显示在Console里面。没有默认值。
 - errorGroup：异常码。详情参见教程。
 
-## 3 运行作业
+## 3 启动Executor
 
+使用以下Maven命令启动
 ```Shell
 mvn saturn-job:run -Dnamespace=www.abc.com -DexecutorName=exe01 -DVIP_SATURN_CONSOLE_URI=http://127.0.0.1:9080
 ```
@@ -71,7 +72,7 @@ mvn saturn-job:run -Dnamespace=www.abc.com -DexecutorName=exe01 -DVIP_SATURN_CON
 
 ## 4 在Console添加Java作业
 
-当IDE启动了Executor后，作业还是不能执行，直到在Console添加和启动相应的Java作业。
+当启动了Executor后，作业还是不能执行，直到在Console添加和启动相应的Java作业。
 
 在Console添加一个Java作业，**作业实现类**必须是你所实现的Java作业的className。
 
